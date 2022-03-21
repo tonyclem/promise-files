@@ -1,16 +1,18 @@
 const lordPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("the lord had may us rich, I have Successed");
+    resolve("the lord had may us rich, I have Succeeded");
   }, 1000);
 });
-lordPromise.then((promise) => console.log(promise));
 
-lordPromise.then((resolveValue) => console.log(resolveValue));
+lordPromise
+  .then((promise) => console.log(promise))
+  .catch((reject) => console.log(reject));
 
 const myPromise = new Promise((resolve, reject) => {
-  if (!true) {
+  let error = false;
+  if (!error) {
     setTimeout(() => {
-      resolve("I have Successed");
+      resolve("I have Succeeded");
     }, 1000);
   } else {
     reject("I have failed");
@@ -26,13 +28,13 @@ myPromise
 var promiseCount = 0;
 
 function testPromise() {
-  var thisPromiseCount = ++promiseCount;
+  var thisPromiseCount = promiseCount + 1;
   console.log(thisPromiseCount + ": Started - Sync code started");
 
   var p1 = new Promise(function (resolve, reject) {
     console.log(thisPromiseCount + ": Promise started - Async code started");
     // This is only an example to create asynchronism
-    window.setTimeout(function () {
+    setTimeout(function () {
       resolve(thisPromiseCount);
     }, Math.random() * 2000 + 1000);
   });
@@ -46,6 +48,6 @@ function testPromise() {
   console.log(thisPromiseCount + ": Promise made - Sync code terminated");
 }
 
-testPromise();
-testPromise();
+// testPromise();
+// testPromise();
 testPromise();

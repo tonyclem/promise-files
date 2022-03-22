@@ -1,14 +1,14 @@
 // Async Example one
 const youtube = new Promise((resolve) => {
   setTimeout(() => {
-    console.table("getting stuff from youtube");
+    console.log("getting stuff from youtube");
     resolve({ videos: [1, 2, 3, 4, 5] });
   }, 2000);
 });
 
 const facebook = new Promise((resolve) => {
   setTimeout(() => {
-    console.table("stuff from facebook");
+    console.log("stuff from facebook");
     resolve({ user: "Name: Clement" });
   }, 2000);
 });
@@ -58,12 +58,11 @@ function createPost(post, callback) {
 
 // async / await / fetch
 // calling the async with difference methods
-async function fetchUser() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function fetchUser() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-  const data = await res.json();
+//   const data = await res.json();
 
-  console.log(data);
-}
-
-fetchUser();
+//   console.log(data);
+// }
+// fetchUser();

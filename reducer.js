@@ -14,8 +14,11 @@ console.log(total);
 
 // example 3
 const numberFour = [25, 2, 9];
-numberFour.reduce((accumulator4, current4) => accumulator4 + current4, 0);
-console.log(numberFour);
+const addFour = numberFour.reduce(
+  (accumulator4, current4) => accumulator4 + current4,
+  0
+);
+console.log(addFour);
 
 // example 4
 let shoppingCart = [

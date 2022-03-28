@@ -3,7 +3,7 @@ const main = document.getElementById("main");
 
 main.innerHTML = "<p>Loading.....</p>";
 
-// fetch
+// fetch data
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   .then((people) => (main.innerHTML = getNameFunc(people)));
@@ -12,7 +12,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 const getNameFunc = (people) => {
   const name = people
     .map((person) => {
-      return `<li>${person.name}</li>`;
+      return `<li> Name: ${person.name},  Email: ${person.email}</li>`;
     })
     .join("\n");
 

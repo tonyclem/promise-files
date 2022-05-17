@@ -1,6 +1,6 @@
 // callBack function
 const callStr1 = false;
-const callStr2 = false;
+const callStr2 = true;
 
 const callFunc1 = (callBack, callBackErr) => {
   if (callStr1) {

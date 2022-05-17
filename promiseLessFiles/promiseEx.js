@@ -30,6 +30,7 @@ const exactPromise = () => {
   });
 
   myPromise.then((v) => console.log(v)).catch((err) => console.log(err));
+
   const newPromise = fetch("https://jsonplaceholder.typicode.com/users").then(
     (v) => v.json()
   );

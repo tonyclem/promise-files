@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.div-container {
+  margin-top: 5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+}
+
+.selectCla {
+  margin-top: 1rem;
+  display: block;
+}
+
+
+.pokemonImg {
+  left: 45%;
+  top: 15%;
+  position: absolute;
+}

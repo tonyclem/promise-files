@@ -33,7 +33,7 @@ let searchTimeout = 0;
 window.onload = () => {
   const searchFieldElem = document.querySelector("#searchField");
   // using callback function here
-  searchFieldElem.addEventListener("keyup", (e) => {
+  searchFieldElem.addEventListener("click", (e) => {
     const query = e.target.value;
     // clear the previous timeout
     clearInterval(searchTimeout);
